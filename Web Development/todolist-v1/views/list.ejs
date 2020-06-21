@@ -6,12 +6,20 @@
     <title>To Do List</title>
 </head>
 <body>
+    <h1> It's a <%= kindOfDay %> ToDo List</h1>
+    <ul>
+        <li>Buy Food</li>
+        <li>Cook Food</li>
+        <li>Eat Food</li>
+        <% newListItem.forEach(element => {%>
+            <li><%= element%></li>
+        <%});  %>
 
-    <% if (kindOfDay === "Saturday" || kindOfDay ==="Sunday"){  %>
-        <h1 style="color: purple;">It's a <%= kindOfDay %> ToDo List</h1>
-    <% } else { %>
-        <h1 style="color:blue;">It's a <%= kindOfDay %> ToDo List</h1>
-    <% } %>
+    </ul>
+<form class="" action="/" method="post">
+    <input type="text" name="newItem">
+    <button type="text" name="button">Add</button>
 
+</form>
 </body>
 </html>
